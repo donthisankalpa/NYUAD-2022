@@ -30,12 +30,16 @@ import DataTable from "examples/Tables/DataTable";
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 import MDButton from "components/MDButton";
+import { useState } from "react";
 
 function Tables() {
   const { columns, rows } = authorsTableData();
+  const [frequency, setFrequency] = useState("weekly");
 
   function generateSchedule() {
-    console.log("hi");
+    fetch("http://example.com/?frequency=" + frequency)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   }
 
   return (
