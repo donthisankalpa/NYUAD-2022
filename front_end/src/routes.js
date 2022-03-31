@@ -37,6 +37,7 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Tables from "layouts/tables";
+import Nurses from "layouts/nurses";
 import Dashboard from "layouts/dashboard";
 // import Billing from "layouts/billing";
 // import RTL from "layouts/rtl";
@@ -63,7 +64,7 @@ const routes = [
     key: "nurses",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/nurses",
-    component: <Tables />,
+    component: <Nurses />,
   },
   {
     type: "collapse",
