@@ -29,9 +29,14 @@ import DataTable from "examples/Tables/DataTable";
 
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
+import MDButton from "components/MDButton";
 
 function Tables() {
   const { columns, rows } = authorsTableData();
+
+  function generateSchedule() {
+    console.log("hi");
+  }
 
   return (
     <DashboardLayout>
@@ -67,6 +72,11 @@ function Tables() {
           </Grid>
         </Grid>
       </MDBox>
+      <Grid item>
+        <MDButton variant="gradient" color="info" onClick={() => generateSchedule()}>
+          Generate Schedule &gt;&gt;
+        </MDButton>
+      </Grid>
       <Footer />
     </DashboardLayout>
   );
