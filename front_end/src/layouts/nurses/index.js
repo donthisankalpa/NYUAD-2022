@@ -52,7 +52,7 @@ function Nurses() {
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
+                <MDTypography variant="h4" color="white">
                   Your Nurses
                 </MDTypography>
               </MDBox>

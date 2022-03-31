@@ -53,14 +53,14 @@ function Tables() {
               <MDBox
                 mx={2}
                 mt={-3}
-                py={3}
+                py={4}
                 px={2}
                 variant="gradient"
                 bgColor="info"
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
+                <MDTypography variant="h4" color="white">
                   Your Wards
                 </MDTypography>
               </MDBox>

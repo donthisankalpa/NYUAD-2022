@@ -89,7 +89,7 @@ const routes = [
   {
     type: "collapse",
     name: "Add a Nurse",
-    key: "sign-up",
+    key: "addWard",
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/addWard",
     component: <Billing />,
@@ -97,7 +97,7 @@ const routes = [
   {
     type: "collapse",
     name: "Add a Ward",
-    key: "sign-up",
+    key: "addNurse",
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/addNurse",
     component: <Notifications />,
@@ -105,7 +105,7 @@ const routes = [
   {
     type: "collapse",
     name: "Generate",
-
+    key: "generateSchedule",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/generateSchedule",
     component: <GenerateSchedule />,

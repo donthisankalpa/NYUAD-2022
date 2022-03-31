@@ -56,7 +56,7 @@ function Billing() {
           borderRadius="lg"
           coloredShadow="info"
           mx={2}
-          mt={-3}
+          mt={0}
           p={2}
           mb={1}
           textAlign="center"
