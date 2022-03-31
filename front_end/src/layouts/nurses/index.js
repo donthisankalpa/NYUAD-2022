@@ -28,7 +28,7 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
+import authorsTableData from "layouts/nurses/data/authorsTableData";
 
 function Nurses() {
   const { columns, rows } = authorsTableData();
