@@ -16,6 +16,7 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import { Link } from "react-router-dom";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -28,6 +29,7 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
+import MDButton from "components/MDButton";
 import authorsTableData from "layouts/nurses/data/authorsTableData";
 
 function Nurses() {
@@ -67,6 +69,13 @@ function Nurses() {
           </Grid>
         </Grid>
       </MDBox>
+      <Grid item>
+        <Link to="/addNurse">
+          <MDButton variant="gradient" color="info">
+            Add a Nurse
+          </MDButton>
+        </Link>
+      </Grid>
       <Footer />
     </DashboardLayout>
   );

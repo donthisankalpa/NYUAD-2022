@@ -37,11 +37,14 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Tables from "layouts/tables";
+import Schedule from "layouts/schedule";
+import GenerateSchedule from "layouts/generateSchedule";
+
 import Nurses from "layouts/nurses";
-import Dashboard from "layouts/dashboard";
-// import Billing from "layouts/billing";
+// import Dashboard from "layouts/dashboard";
+import Billing from "layouts/billing";
 // import RTL from "layouts/rtl";
-// import Notifications from "layouts/notifications";
+import Notifications from "layouts/notifications";
 // import Profile from "layouts/profile";
 // import SignIn from "layouts/authentication/sign-in";
 // import SignUp from "layouts/authentication/sign-up";
@@ -72,15 +75,40 @@ const routes = [
     key: "schedules",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/schedules",
-    component: <Tables />,
+    component: <Schedule />,
+  },
+
+  // {
+  //   type: "collapse",
+  //   name: "Dashboard",
+  //   key: "dashboard",
+  //   icon: <Icon fontSize="small">dashboard</Icon>,
+  //   route: "/dashboard",
+  //   component: <Dashboard />,
+  // },
+  {
+    type: "collapse",
+    name: "Add a Nurse",
+    key: "sign-up",
+    icon: <Icon fontSize="small">assignment</Icon>,
+    route: "/addWard",
+    component: <Billing />,
   },
   {
     type: "collapse",
-    name: "Dashboard",
-    key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
+    name: "Add a Ward",
+    key: "sign-up",
+    icon: <Icon fontSize="small">assignment</Icon>,
+    route: "/addNurse",
+    component: <Notifications />,
+  },
+  {
+    type: "collapse",
+    name: "Generate",
+
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/generateSchedule",
+    component: <GenerateSchedule />,
   },
   // {
   //   type: "collapse",

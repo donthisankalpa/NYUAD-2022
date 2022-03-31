@@ -16,7 +16,6 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-import { Link } from "react-router-dom";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -27,21 +26,37 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
-
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
-import MDButton from "components/MDButton";
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Tables() {
   const { columns, rows } = authorsTableData();
-  // const [frequency, setFrequency] = useState("weekly");
-  // setFrequency(0);
-  function generateSchedule() {
-    //   fetch(`http://example.com/?frequency=${frequency}`)
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data));
-  }
+
+  const [loading, setLoading] = useState(true);
+
+  // Testing for the time being
+  if (loading)
+    return (
+      <div
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <Box sx={{ height: 200, width: 200, display: "flex" }}>
+          <CircularProgress size={200} sx={{ height: 200, width: 50, display: "flex" }} />
+        </Box>
+      </div>
+    );
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
   return (
     <DashboardLayout>
@@ -61,7 +76,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Your Wards
+                  Generated Schedule
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -77,19 +92,7 @@ function Tables() {
           </Grid>
         </Grid>
       </MDBox>
-      <Grid item>
-        <Link to="/addWard">
-          <MDButton variant="gradient" color="info">
-            Add a ward
-          </MDButton>
-        </Link>
-        &nbsp;&nbsp;&nbsp;
-        <Link to="/generateSchedule">
-          <MDButton variant="gradient" color="info" onClick={() => generateSchedule()}>
-            Generate Schedule &gt;&gt;
-          </MDButton>
-        </Link>
-      </Grid>
+
       <Footer />
     </DashboardLayout>
   );
