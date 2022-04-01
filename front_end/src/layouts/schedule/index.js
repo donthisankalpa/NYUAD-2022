@@ -43,7 +43,7 @@ function Tables() {
       <div
         style={{
           position: "absolute",
-          left: "50%",
+          left: "60%",
           top: "50%",
           transform: "translate(-50%, -50%)",
         }}

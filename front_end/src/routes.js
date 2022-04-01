@@ -89,17 +89,17 @@ const routes = [
   {
     type: "collapse",
     name: "Add a Nurse",
-    key: "addWard",
+    key: "addNurse",
     icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/addWard",
+    route: "/addNurse",
     component: <Billing />,
   },
   {
     type: "collapse",
     name: "Add a Ward",
-    key: "addNurse",
+    key: "addWard",
     icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/addNurse",
+    route: "/addWard",
     component: <Notifications />,
   },
   {

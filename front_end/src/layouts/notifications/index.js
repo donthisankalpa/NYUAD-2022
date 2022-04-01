@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-// import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -25,7 +25,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 
 // react-router-dom components
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -68,7 +68,7 @@ function Billing() {
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
             <MDBox mb={2}>
-              <MDInput type="number" label="Ward Number" fullWidth />
+              <MDInput type="number" label="Ward Number" name="wardNumber" fullWidth />
             </MDBox>
             <MDBox mb={2}>
               <MDInput type="text" label="Number of Shifts" fullWidth />
@@ -80,14 +80,19 @@ function Billing() {
               <MDInput type="number" label="Minimum Number of Nurses" fullWidth />
             </MDBox>
 
-            <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
-                Cancle
-              </MDButton>
-              <MDButton variant="gradient" color="info" fullWidth>
-                Save
-              </MDButton>
-            </MDBox>
+            <Grid item textAlign="center">
+              <Link to="/wards">
+                <MDButton variant="gradient" color="error" type="reset">
+                  Cancle
+                </MDButton>
+              </Link>
+              &nbsp;&nbsp;&nbsp;
+              <Link to="/wards">
+                <MDButton variant="gradient" color="info">
+                  Save &gt;&gt;
+                </MDButton>
+              </Link>
+            </Grid>
           </MDBox>
         </MDBox>
       </Card>
